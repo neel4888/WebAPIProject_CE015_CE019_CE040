@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StuDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pcm" Type="Int32" Nullable="false" />
+    <Property Name="gujcet" Type="Int32" Nullable="false" />
+    <Property Name="merit" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StuDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+  </EntityContainer>
+</Schema>
